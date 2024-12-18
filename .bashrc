@@ -3,8 +3,20 @@
 # Clear screen
 clear
 
-# Start Matrix Effect in Background
+# Run Matrix Animation for 5 seconds
 cmatrix -b -u 2 &
+sleep 5
+killall cmatrix
+
+# Simulate System Initialization
+echo -e "\e[32m[+] Initializing Termux Environment...\e[0m"
+sleep 1
+echo -e "\e[32m[+] Loading System Modules...\e[0m"
+sleep 1
+echo -e "\e[32m[+] Establishing Secure Connection...\e[0m"
+sleep 1
+echo -e "\e[32m[+] System Ready!\e[0m"
+sleep 1
 
 # Display ASCII Art Banner
 cat << "EOF"
@@ -20,7 +32,7 @@ EOF
 toilet -f term "Rooted User" --metal
 echo -e "\e[32mWelcome, Rooted User.\e[0m"
 
-# System Info
+# Show System Info
 neofetch
 
 # Custom Prompt: root@manz /current/path $
